@@ -6,8 +6,8 @@ from application.models import Tasks
 def home():
     all_tasks = Tasks.query.all()
     output = ""
-    for task in all_tasks()
-        output += task.description + "<br>"
+    for task in all_tasks:
+        output += task.description + " - Completed? " + str(task.completed) + "<br>"
     return output
 
 @app.route("/create")
@@ -38,7 +38,7 @@ def update(id):
     db.session.commit()
     return f"Most recent task was updated with the description: {new_description}"#
 
-@app.route("/delete/<int:id")
+@app.route("/delete/<int:id>")
 def delete(id):
     task = Tasks.query.filter_by(id=id).first()
     db.session.delete(task)
