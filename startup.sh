@@ -15,7 +15,8 @@ pip3 install -r requirements.txt
 
 # Make the installation directory
 FILE=/opt/qa-todo-list
-if [ ! -f "$FILE" ];
+if [ ! -f "$FILE" ]
+then
     sudo mkdir /opt/qa-todo-list
 fi
 
