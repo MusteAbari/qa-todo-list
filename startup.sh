@@ -27,3 +27,5 @@ sudo chown -R jenkins /opt/qa-todo-list
 sudo systemctl daemon-reload
 sudo systemctl stop app.service
 sudo systemctl start app.service
+
+python3 app.py
