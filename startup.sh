@@ -22,7 +22,7 @@ pip3 install -r requirements.txt
 
 # Give jenkins user permissions for the installation directory
 echo $WORKSPACE
-echo $GIT_CHECKOUT_DIR
+#echo $GIT_CHECKOUT_DIR
 sudo chown -R jenkins /opt/qa-todo-list
 
 
