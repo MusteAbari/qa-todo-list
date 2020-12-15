@@ -14,11 +14,11 @@ pip3 install -r requirements.txt
 # Deploy Phase
 
 # Make the installation directory
-FILE=/opt/qa-todo-list
-if [ ! -f "$FILE" ]
-then
-    sudo mkdir /opt/qa-todo-list
-fi
+#FILE=/opt/qa-todo-list
+#if [ ! -f "$FILE" ]
+#then
+#    sudo mkdir /opt/qa-todo-list
+#fi
 
 # Give jenkins user permissions for the installation directory
 sudo chown -R jenkins /opt/qa-todo-list
