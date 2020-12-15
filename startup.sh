@@ -3,6 +3,12 @@ sudo apt update
 sudo apt-get install python3-venv -y
 
 # Test Phase
+cd $WORKSPACE
+ls -lah
+sudo cp -r $WORKSPACE /opt/jenkins
+sudo chown -R jenkins /opt/jenkins
+
+cd /opt/jenkins
 python3 -m venv venv
 source venv/bin/activate
 pip3 install wheel
@@ -21,9 +27,9 @@ pip3 install -r requirements.txt
 #fi
 
 # Give jenkins user permissions for the installation directory
-echo $WORKSPACE
+#echo $WORKSPACE
 #echo $GIT_CHECKOUT_DIR
-sudo chown -R jenkins /opt/qa-todo-list
+#sudo chown -R jenkins /opt/qa-todo-list
 
 
 sudo systemctl daemon-reload
