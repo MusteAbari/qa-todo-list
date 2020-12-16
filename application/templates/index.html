@@ -2,7 +2,7 @@
 {% block body %}
 
 
-<h2>Todo:Incompleted Tasks</h2>
+<h2>Todo1:Incompleted Tasks</h2>
 {% for task in all_tasks %}
     {% if task.completed == false %}
         {{ task.description }}
@@ -23,7 +23,7 @@
     {% endif %}
 {% endfor %}
 
-<h2>Todo:Completed Tasks</h2>
+<h2>Todo2:Completed Tasks</h2>
 {% for task in all_tasks %}
     {% if task.completed == True %}
         {{ task.description }}
