@@ -35,5 +35,3 @@ pip3 install -r requirements.txt
 sudo systemctl daemon-reload
 sudo systemctl stop app.service
 sudo systemctl start app.service
-
-python3 app.py
